@@ -1,1 +1,30 @@
-<p>home works!</p>
+<section class="hero">
+    <div class="container">
+      <h1>Domine o Ecossistema Angular</h1>
+      <p class="subtitle">Artigos técnicos e tutoriais para desenvolvedores profissionais</p>
+    </div>
+  </section>
+  
+  <section class="featured-posts">
+    <div class="container">
+      <h2>Artigos em Destaque</h2>
+      <div class="posts-grid">
+        @for (post of featuredPosts; track post.id) {
+          <app-post-card [post]="post"></app-post-card>
+        }
+      </div>
+    </div>
+  </section>
+  
+  <section class="skills">
+    <div class="container">
+      <h2>Tecnologias Dominadas</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="/assets/icons/angular.svg" alt="Angular">
+          <h3>Angular Framework</h3>
+          <p>Domínio avançado de componentes, serviços e RxJS</p>
+        </div>
+      </div>
+    </div>
+  </section>
