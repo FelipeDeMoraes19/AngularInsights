@@ -1,0 +1,46 @@
+@use 'src/styles/variables' as *;
+
+.header {
+  background: $primary-color;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    color: $light-text;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+
+    span {
+      color: $accent-color;
+    }
+  }
+
+  .nav-menu {
+    ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: rgba($light-text, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $accent-color;
+      }
+    }
+  }
+}
