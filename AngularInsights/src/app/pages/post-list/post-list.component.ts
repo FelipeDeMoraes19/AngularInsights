@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PostService } from '../../services/post.service';
+import { PostCardComponent } from '../../shared/post-card/post-card.component';
 
 @Component({
-  selector: 'app-post-list',
-  imports: [],
+  standalone: true,
+  imports: [PostCardComponent],
   templateUrl: './post-list.component.html',
-  styleUrl: './post-list.component.scss'
+  styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent {
-
+  posts = inject(PostService).getPosts();
 }

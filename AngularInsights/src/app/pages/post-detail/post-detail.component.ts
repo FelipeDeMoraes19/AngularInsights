@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PostService } from '../../services/post.service';
 
 @Component({
-  selector: 'app-post-detail',
-  imports: [],
+  standalone: true,
   templateUrl: './post-detail.component.html',
-  styleUrl: './post-detail.component.scss'
+  styleUrls: ['./post-detail.component.scss']
 })
 export class PostDetailComponent {
-
+  private route = inject(ActivatedRoute);
+  post = inject(PostService).getPost(
+    Number(this.route.snapshot.params['id'])
+  );
 }
