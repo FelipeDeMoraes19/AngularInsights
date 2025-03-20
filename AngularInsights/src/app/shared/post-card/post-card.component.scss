@@ -1,0 +1,58 @@
+@use 'src/styles/variables' as *;
+
+.post-card {
+  background: white;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+
+    .category-badge {
+      background: $accent-color;
+      color: white;
+      padding: 0.3rem 0.8rem;
+      border-radius: 1rem;
+    }
+  }
+
+  .card-content {
+    padding: 1.5rem;
+
+    h3 {
+      margin: 0 0 1rem;
+      color: $dark-text;
+    }
+
+    .excerpt {
+      color: rgba($dark-text, 0.8);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: rgba($dark-text, 0.6);
+    }
+  }
+}
