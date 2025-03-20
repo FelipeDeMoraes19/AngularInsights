@@ -1,0 +1,26 @@
+<article class="post-card" [routerLink]="['/posts', post.id]">
+    <div class="card-header">
+      <span class="category-badge">{{ post.category }}</span>
+      <time>{{ post.date | date:'dd/MM/yyyy' }}</time>
+    </div>
+    
+    <div class="image-container">
+      <img [src]="post.coverImage" [alt]="post.title" class="post-image">
+    </div>
+  
+    <div class="card-content">
+      <h3 class="post-title">{{ post.title }}</h3>
+      <p class="post-excerpt">{{ post.excerpt }}</p>
+      
+      <div class="card-footer">
+        <div class="author-info">
+          <span class="material-icons-outlined">person</span>
+          <span class="author-name">{{ post.author }}</span>
+        </div>
+        <div class="read-time">
+          <span class="material-icons-outlined">schedule</span>
+          {{ post.readTime }} min read
+        </div>
+      </div>
+    </div>
+  </article>
