@@ -6,13 +6,13 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent),
     title: 'Angular Insights - Home'
   },
-  {
-    path: 'posts',
+  { 
+    path: 'posts', 
     loadComponent: () => import('./pages/post-list/post-list.component').then(m => m.PostListComponent),
-    title: 'Artigos Técnicos'
+    title: 'Todos os Artigos'
   },
-  {
-    path: 'posts/:id',
+  { 
+    path: 'posts/:id', 
     loadComponent: () => import('./pages/post-detail/post-detail.component').then(m => m.PostDetailComponent),
     title: 'Detalhes do Artigo'
   }
