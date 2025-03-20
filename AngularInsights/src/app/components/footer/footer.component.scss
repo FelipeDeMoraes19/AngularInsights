@@ -1,0 +1,76 @@
+@use 'src/styles/variables' as *;
+
+.footer {
+  background: darken($primary-color, 5%);
+  color: $light-text;
+  padding: 4rem 0 2rem;
+  margin-top: auto;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .footer-section {
+    h4 {
+      color: $accent-color;
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.8rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+
+      input {
+        flex: 1;
+        padding: 0.8rem;
+        border: 1px solid rgba($light-text, 0.2);
+        border-radius: 4px;
+        background: transparent;
+        color: $light-text;
+      }
+
+      button {
+        background: $accent-color;
+        color: $light-text;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    margin-top: 3rem;
+    opacity: 0.8;
+    font-size: 0.9rem;
+  }
+}
