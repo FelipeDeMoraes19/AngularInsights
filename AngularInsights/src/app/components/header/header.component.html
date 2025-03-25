@@ -1,15 +1,19 @@
 <header class="header">
-    <div class="container">
-      <a routerLink="/" class="logo">
-        <span>Angular</span>Insights
-      </a>
-      
-      <nav class="nav-menu">
-        <ul>
-          <li><a routerLink="/" class="nav-link">Home</a></li>
-          <li><a routerLink="/posts" class="nav-link">Artigos</a></li>
-          <li><a class="nav-link">Sobre</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="container">
+    <a routerLink="/" class="logo">
+      <span>Angular</span>Insights
+    </a>
+    
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <span class="material-icons-outlined">menu</span>
+    </button>
+
+    <nav class="nav-menu" [class.active]="isMenuOpen">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active" class="nav-link">Home</a></li>
+        <li><a routerLink="/posts" routerLinkActive="active" class="nav-link">Artigos</a></li>
+        <li><a routerLink="/sobre" class="nav-link">Sobre</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

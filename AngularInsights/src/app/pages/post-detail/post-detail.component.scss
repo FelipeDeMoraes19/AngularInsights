@@ -1,0 +1,166 @@
+@use 'styles/_variables' as *;
+
+
+
+.post-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  .post-header {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      color: rgba($dark-text, 0.7);
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      a {
+        color: $accent-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .meta-info {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      color: rgba($dark-text, 0.8);
+      font-size: 0.95rem;
+      flex-wrap: wrap;
+
+      div {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+
+        .material-icons-outlined {
+          font-size: 1.1rem;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+
+  .cover-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: $border-radius;
+    margin: 2rem 0;
+    box-shadow: $box-shadow;
+  }
+
+  .post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba($dark-text, 0.9);
+
+    h2, h3 {
+      margin: 2rem 0 1rem;
+      color: $dark-text;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    pre {
+      background: lighten($primary-color, 75%);
+      padding: 1rem;
+      border-radius: $border-radius;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      background: rgba($accent-color, 0.1);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      color: darken($accent-color, 10%);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      border-radius: $border-radius;
+    }
+  }
+
+  .comments {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba($dark-text, 0.1);
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .comment-form {
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid rgba($dark-text, 0.2);
+        border-radius: $border-radius;
+        margin-bottom: 1rem;
+        min-height: 120px;
+        font-family: inherit;
+      }
+
+      .btn-primary {
+        font-size: 1rem;
+        padding: 0.8rem 2rem;
+      }
+    }
+  }
+
+  .not-found {
+    text-align: center;
+    padding: 4rem 0;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      font-size: 1rem;
+      padding: 1rem 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .post-detail {
+    .post-header {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .cover-image {
+      margin: 1rem 0;
+    }
+
+    .post-content {
+      font-size: 1rem;
+    }
+  }
+}

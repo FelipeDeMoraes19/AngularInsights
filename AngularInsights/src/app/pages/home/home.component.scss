@@ -1,4 +1,6 @@
-@use 'src/styles/variables' as *;
+@use 'styles/_variables' as *;
+
+
 
 .hero {
   background: linear-gradient(rgba($primary-color, 0.9), rgba($primary-color, 0.9)),

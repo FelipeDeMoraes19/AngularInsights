@@ -1,0 +1,7 @@
+@use 'styles/_variables' as *;
+
+
+.main-content {
+    min-height: calc(100vh - 120px);
+    padding: 2rem 0;
+  }

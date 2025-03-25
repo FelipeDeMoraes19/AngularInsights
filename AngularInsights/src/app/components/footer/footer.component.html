@@ -1,28 +1,47 @@
 <footer class="footer">
-    <div class="container">
-      <div class="footer-section">
-        <h4>Sobre</h4>
-        <p>Compartilhando conhecimento profissional em desenvolvimento web</p>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Categorias</h4>
-        <ul>
-          <li>Angular</li>
-          <li>TypeScript</li>
-          <li>Frontend</li>
-          <li>Carreira</li>
-        </ul>
-      </div>
-  
-      <div class="footer-section">
-        <h4>Newsletter</h4>
-        <input type="email" placeholder="Digite seu email">
-        <button>Inscrever</button>
-      </div>
+  <div class="container">
+    <div class="footer-section">
+      <h4>Sobre</h4>
+      <p>Compartilhando conhecimento profissional em desenvolvimento web</p>
     </div>
     
-    <div class="copyright">
-      <p>© 2024 AngularInsights. Todos os direitos reservados.</p>
+    <div class="footer-section">
+      <h4>Categorias</h4>
+      <ul>
+        <li>Angular</li>
+        <li>TypeScript</li>
+        <li>Frontend</li>
+        <li>Carreira</li>
+      </ul>
     </div>
-  </footer>
+
+    <div class="footer-section">
+      <h4>Newsletter</h4>
+      <div class="form-container">
+        <input 
+          type="email" 
+          [(ngModel)]="email"
+          placeholder="Digite seu email"
+          [disabled]="(newsletterService.loading$ | async) ?? false"
+        >
+        <button 
+          (click)="handleSubscribe()"
+          [disabled]="!email || ((newsletterService.loading$ | async) ?? false)"
+        >
+          @if (newsletterService.loading$ | async) {
+            <app-loading-spinner size="small" />
+          } @else {
+            Inscrever
+          }
+        </button>
+      </div>
+      @if (newsletterService.messages$ | async; as message) {
+        <div class="message">{{ message }}</div>
+      }
+    </div>
+  </div>
+  
+  <div class="copyright">
+    <p>© 2024 AngularInsights. Todos os direitos reservados.</p>
+  </div>
+</footer>

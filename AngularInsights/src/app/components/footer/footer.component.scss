@@ -1,4 +1,6 @@
-@use 'src/styles/variables' as *;
+@use 'styles/_variables' as *;
+
+
 
 .footer {
   background: darken($primary-color, 5%);

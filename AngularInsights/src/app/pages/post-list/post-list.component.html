@@ -1,1 +1,13 @@
-<p>post-list works!</p>
+<section class="post-list">
+    <div class="container">
+      <h2>Todos os Artigos</h2>
+      <div class="posts-grid">
+        @for (post of posts; track post.id) {
+          <app-post-card [post]="post"></app-post-card>
+        } @empty {
+          <p class="no-posts">Nenhum artigo encontrado</p>
+        }
+      </div>
+    </div>
+  </section>
+  

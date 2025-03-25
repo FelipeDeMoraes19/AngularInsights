@@ -1,1 +1,42 @@
-<p>post-detail works!</p>
+@if (post) {
+    <article class="post-detail">
+      <div class="post-header">
+        <div class="breadcrumb">
+          <a routerLink="/posts">Artigos</a> / {{post.category}} / {{post.title}}
+        </div>
+        <h1>{{post.title}}</h1>
+        <div class="meta-info">
+          <div class="author">
+            <span class="material-icons-outlined">person</span>
+            {{post.author}}
+          </div>
+          <div class="date">
+            <span class="material-icons-outlined">calendar_today</span>
+            {{post.date | date:'dd/MM/yyyy'}}
+          </div>
+          <div class="read-time">
+            <span class="material-icons-outlined">schedule</span>
+            {{post.readTime}} min de leitura
+          </div>
+        </div>
+      </div>
+  
+      <img [src]="post.coverImage" [alt]="post.title" class="cover-image">
+  
+      <div class="post-content" [innerHTML]="post.content"></div>
+  
+      <section class="comments">
+        <h2>Comentários (3)</h2>
+        <div class="comment-form">
+          <textarea placeholder="Deixe seu comentário..."></textarea>
+          <button class="btn-primary">Enviar</button>
+        </div>
+      </section>
+    </article>
+  } @else {
+    <div class="not-found">
+      <h2>Post não encontrado</h2>
+      <a routerLink="/posts" class="btn-primary">Voltar para artigos</a>
+    </div>
+  }
+  

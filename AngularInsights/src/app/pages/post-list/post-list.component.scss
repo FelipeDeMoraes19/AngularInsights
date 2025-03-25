@@ -1,0 +1,18 @@
+@use 'styles/_variables' as *;
+
+
+
+.post-list {
+  padding: $section-padding;
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $dark-text;
+  }
+
+  .no-posts {
+    text-align: center;
+    color: rgba($dark-text, 0.6);
+  }
+}
