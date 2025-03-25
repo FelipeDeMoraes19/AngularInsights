@@ -2,12 +2,8 @@
 @use 'styles/_variables' as *;
 
 .hero {
-  // Substituindo lighten($primary-color, 70%) -> color.adjust(...)
-  background: linear-gradient(
-      rgba($primary-color, 0.9),
-      rgba($primary-color, 0.9)
-    ),
-    url('/assets/images/code-bg.jpg');
+  background: linear-gradient(rgba($primary-color, 0.9), rgba($primary-color, 0.9)),
+              url('/assets/images/telas de codigo.avif');
   background-size: cover;
   background-position: center;
   color: $light-text;
@@ -44,7 +40,6 @@
 }
 
 .skills {
-  // Trocando lighten($primary-color, 70%)
   background: color.adjust($primary-color, $lightness: 70%);
   padding: $section-padding;
 

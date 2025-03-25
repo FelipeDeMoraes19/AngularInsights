@@ -3,7 +3,7 @@
 
 .about-hero {
   background: linear-gradient(rgba($primary-color, 0.9), rgba($primary-color, 0.9)),
-    url('/assets/images/about-hero.jpg');
+    url('/assets/images/back-end.webp');
   background-size: cover;
   background-position: center;
   color: $light-text;
@@ -23,18 +23,6 @@
     p {
       font-size: 1.2rem;
       opacity: 0.9;
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 4rem 1rem 2rem;
-
-    h1 {
-      font-size: 1.8rem;
-    }
-
-    p {
-      font-size: 1rem;
     }
   }
 }
@@ -59,9 +47,5 @@
       line-height: 1.6;
       margin-bottom: 1.5rem;
     }
-  }
-
-  @media (max-width: 768px) {
-    padding: 2rem 1rem;
   }
 }

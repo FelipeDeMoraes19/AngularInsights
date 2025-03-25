@@ -96,7 +96,6 @@
       position: fixed;
       top: 60px;
       right: -100%;
-      // Substituindo darken($primary-color, 5%) por color.adjust()
       background: color.adjust($primary-color, $lightness: -5%);
       width: 100%;
       max-width: 300px;
@@ -141,4 +140,12 @@
       height: calc(100vh - 54px);
     }
   }
+
+  .logo-img {
+    height: 32px;
+    margin-right: 8px;
+  }
+  
+
+  
 }

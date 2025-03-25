@@ -13,7 +13,7 @@ export class PostService {
       category: 'Angular',
       author: 'Felipe Developer',
       readTime: 8,
-      coverImage: '/assets/images/post1.jpg'
+      coverImage: '/assets/images/angular-icon.svg'
     },
     {
       id: 2,
@@ -24,7 +24,40 @@ export class PostService {
       category: 'TypeScript',
       author: 'Felipe Developer',
       readTime: 6,
-      coverImage: '/assets/images/post2.jpg'
+      coverImage: '/assets/images/typescript-2.svg'
+    },
+    {
+      id: 3,
+      title: 'Melhores Práticas de Estrutura de Pastas em Angular',
+      excerpt: 'Organize seu projeto de forma escalável e mantenível...',
+      content: `<p>Uma boa organização de pastas faz toda a diferença em projetos de médio e grande porte. Com uma estrutura clara, você facilita a manutenção e encontra facilmente módulos, componentes e serviços. Confira algumas sugestões de como categorizar seu projeto!</p>`,
+      date: '2024-03-25',
+      category: 'Angular',
+      author: 'Felipe Developer',
+      readTime: 7,
+      coverImage: '/assets/images/AngularImagem.jpg'
+    },
+    {
+      id: 4,
+      title: 'RxJS e Programação Reativa',
+      excerpt: 'Aprenda a criar streams de dados com Observables e Operators',
+      content: `<p>RxJS é uma biblioteca poderosa para lidar com fluxos assíncronos no Angular. Dominar operators como map, filter e switchMap permite criar arquiteturas robustas e flexíveis. Neste artigo, exploramos os conceitos-chave e exemplos práticos de como integrar RxJS ao seu dia a dia de desenvolvimento.</p>`,
+      date: '2024-03-22',
+      category: 'Angular',
+      author: 'Felipe Developer',
+      readTime: 5,
+      coverImage: '/assets/images/RxJS.png'
+    },
+    {
+      id: 5,
+      title: 'Carreira em Frontend',
+      excerpt: 'Dicas para evoluir como desenvolvedor web e se destacar no mercado',
+      content: `<p>A área de Frontend está em alta, mas exige constante estudo e atualização. Nesta série de dicas, abordamos tópicos como boas práticas, ferramentas, soft skills e networking para ajudá-lo a dar um salto na carreira como desenvolvedor web.</p>`,
+      date: '2024-03-28',
+      category: 'Carreira',
+      author: 'Felipe Developer',
+      readTime: 4,
+      coverImage: '/assets/images/desenvolvedor-front-end.jpg'
     }
   ];
 
