@@ -1,16 +1,17 @@
+@use 'sass:color';
 @use 'styles/_variables' as *;
-
 
 .post-card {
   background: white;
   border-radius: $border-radius;
   overflow: hidden;
   box-shadow: $box-shadow;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 
   &:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15);
   }
 
   img {
@@ -31,6 +32,9 @@
       color: white;
       padding: 0.3rem 0.8rem;
       border-radius: 1rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
   }
 
@@ -40,9 +44,10 @@
     h3 {
       margin: 0 0 1rem;
       color: $dark-text;
+      font-size: 1.25rem;
     }
 
-    .excerpt {
+    .post-excerpt {
       color: rgba($dark-text, 0.8);
       line-height: 1.6;
       margin-bottom: 1.5rem;

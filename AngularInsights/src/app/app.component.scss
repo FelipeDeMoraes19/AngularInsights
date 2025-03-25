@@ -1,7 +1,11 @@
+@use 'sass:color';
 @use 'styles/_variables' as *;
 
-
 .main-content {
-    min-height: calc(100vh - 120px);
-    padding: 2rem 0;
+  min-height: calc(100vh - 120px);
+  padding: 2rem 0;
+
+  @media (max-width: 768px) {
+    padding: 1rem 0;
   }
+}

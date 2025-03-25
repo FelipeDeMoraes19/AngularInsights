@@ -1,11 +1,15 @@
+@use 'sass:color';
 @use 'styles/_variables' as *;
 
-
-
 .hero {
-  background: linear-gradient(rgba($primary-color, 0.9), rgba($primary-color, 0.9)),
-              url('/assets/images/code-bg.jpg');
+  // Substituindo lighten($primary-color, 70%) -> color.adjust(...)
+  background: linear-gradient(
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.9)
+    ),
+    url('/assets/images/code-bg.jpg');
   background-size: cover;
+  background-position: center;
   color: $light-text;
   text-align: center;
   padding: 8rem 0 6rem;
@@ -18,6 +22,14 @@
   .subtitle {
     font-size: 1.2rem;
     opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    padding: 5rem 1rem 4rem;
+
+    h1 {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -32,7 +44,8 @@
 }
 
 .skills {
-  background: lighten($primary-color, 70%);
+  // Trocando lighten($primary-color, 70%)
+  background: color.adjust($primary-color, $lightness: 70%);
   padding: $section-padding;
 
   h2 {
@@ -52,11 +65,25 @@
     border-radius: $border-radius;
     box-shadow: $box-shadow;
     text-align: center;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
 
     img {
       width: 60px;
       height: 60px;
       margin-bottom: 1rem;
+      object-fit: contain;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+
+    .skill-card {
+      padding: 1.5rem;
     }
   }
 }

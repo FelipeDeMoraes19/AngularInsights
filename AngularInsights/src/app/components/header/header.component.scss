@@ -1,6 +1,5 @@
+@use 'sass:color';
 @use 'styles/_variables' as *;
-
-
 
 .header {
   background: $primary-color;
@@ -97,7 +96,8 @@
       position: fixed;
       top: 60px;
       right: -100%;
-      background: darken($primary-color, 5%);
+      // Substituindo darken($primary-color, 5%) por color.adjust()
+      background: color.adjust($primary-color, $lightness: -5%);
       width: 100%;
       max-width: 300px;
       height: calc(100vh - 60px);

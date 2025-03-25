@@ -1,5 +1,5 @@
+@use 'sass:color';
 @use 'styles/_variables' as *;
-
 
 .spinner-overlay {
   position: fixed;
@@ -30,5 +30,7 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
